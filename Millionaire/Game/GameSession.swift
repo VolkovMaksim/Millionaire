@@ -26,16 +26,4 @@ class GameSession {
     
     // количество вопросов
     let countOfQuestions = DataOfQuestions.init().questions.count
-    
-    // оповещаем делегата о том, что игра окончена
-//    private func answerIncorrect () {
-//        self.gameDelegate?.didEndGame(withResult: rightAnswersCount)
-//    }
-    
-//    func countOfRightAnswer() -> Int {
-//        rightAnswersCount = (gameDelegate?.getCountOfRightAnswer())!
-//        return rightAnswersCount
-//    }
-    
-    
 }
