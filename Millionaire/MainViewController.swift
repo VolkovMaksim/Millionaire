@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func startGame(_ sender: Any) {
-        let gameSession = GameSession()
+        //let gameSession = GameSession()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
