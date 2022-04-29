@@ -12,6 +12,20 @@ protocol GameViewControllerDelegate: AnyObject {
     func getCountOfRightAnswer() -> Int
 }
 
+protocol RandomQuestionsStrategy {
+    func randomQuestionON(_ random: Bool) -> [Question]
+}
+
+final class RandomStrategy: RandomQuestionsStrategy {
+    func randomQuestionON(_ random: Bool) -> [Question] {
+        if random == true {
+            return []
+        } else {
+            return []
+        }
+    }
+}
+
 class GameViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -21,6 +35,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var var3: UIButton!
     @IBOutlet weak var var4: UIButton!
     
+    @IBOutlet weak var countOfQuestions: UILabel!
     
     weak var delegate: GameViewControllerDelegate?
     var gameSession = GameSession()
@@ -32,7 +47,7 @@ class GameViewController: UIViewController {
         
         // 4. После начала игры создайте GameSession и передайте его синглтону Game/
         Game.shared.gameSession = gameSession
-        
+        print(gameSession.allQuestions)
         labelOfQuestion()
         
         // делаем делегата, чтобы ловить окончание игры
@@ -90,6 +105,7 @@ class GameViewController: UIViewController {
 
 extension GameViewController: GameSessionDelegate {
     func labelOfQuestion() {
+        countOfQuestions.text = "Вопрос №\(gameSession.rightAnswersCount + 1) (\(gameSession.rightAnswersCount * 100 / gameSession.allQuestions.count)%)"
         // если количество правильных ответов меньше количества вопросов, то задаем вопрос
         if gameSession.rightAnswersCount < gameSession.allQuestions.count {
             let questionAndAnswer = gameSession.allQuestions[gameSession.rightAnswersCount]

@@ -19,11 +19,12 @@ class GameSession {
     //weak var gameVCDelegate: GameViewControllerDelegate?
     
     // перечень вопросов и ответов
-    let allQuestions = DataOfQuestions.init().questions
+    let allQuestions = DataOfQuestions.init().questions + Game.shared.questions
+    
     
     // количество правильных ответов за игровую сессию
     var rightAnswersCount = 0
     
     // количество вопросов
-    let countOfQuestions = DataOfQuestions.init().questions.count
+    let countOfQuestions = AddQuestionViewController.init().getQuestion().count
 }

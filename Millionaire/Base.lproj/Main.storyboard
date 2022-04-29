@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lac-Ee-8T2">
-                                <rect key="frame" x="82.5" y="325" width="210" height="50"/>
+                                <rect key="frame" x="82.5" y="235" width="210" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NpS-tH-CTL"/>
                                     <constraint firstAttribute="width" constant="210" id="z40-JM-dsY"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rr-mc-s3O">
-                                <rect key="frame" x="82.5" y="150" width="210" height="50"/>
+                                <rect key="frame" x="82.5" y="110" width="210" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="C7Y-cc-wqn"/>
                                     <constraint firstAttribute="height" constant="50" id="Yla-l3-d6L"/>
@@ -46,11 +46,39 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последний результат: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDV-La-Vad">
-                                <rect key="frame" x="67" y="208" width="241" height="27"/>
+                                <rect key="frame" x="67" y="168" width="241" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOh-4J-ojI">
+                                <rect key="frame" x="82.5" y="315" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="4qB-vq-Zou"/>
+                                    <constraint firstAttribute="height" constant="50" id="hgE-xH-Yo8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="НАСТРОЙКИ">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1FH-bn-t43" kind="presentation" id="FG0-re-hDj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff8-eK-9Wy">
+                                <rect key="frame" x="82.5" y="395" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gtR-ef-W1H"/>
+                                    <constraint firstAttribute="width" constant="210" id="kEq-08-82Z"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+ ВОПРОС">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tlA-9u-V1g" kind="presentation" id="dJP-Xf-Rib"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -58,9 +86,13 @@
                             <constraint firstItem="yDV-La-Vad" firstAttribute="top" secondItem="0Rr-mc-s3O" secondAttribute="bottom" constant="8" symbolic="YES" id="Lh0-DD-iq0"/>
                             <constraint firstItem="Lac-Ee-8T2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TgF-j0-rat"/>
                             <constraint firstItem="yDV-La-Vad" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vzx-At-JUo"/>
-                            <constraint firstItem="0Rr-mc-s3O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="sMr-2A-SRy"/>
+                            <constraint firstItem="Ff8-eK-9Wy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xz2-Jf-PW4"/>
+                            <constraint firstItem="vOh-4J-ojI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YH7-Wk-eLI"/>
+                            <constraint firstItem="Ff8-eK-9Wy" firstAttribute="top" secondItem="vOh-4J-ojI" secondAttribute="bottom" constant="30" id="s4C-C4-b4J"/>
+                            <constraint firstItem="0Rr-mc-s3O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="sMr-2A-SRy"/>
+                            <constraint firstItem="vOh-4J-ojI" firstAttribute="top" secondItem="Lac-Ee-8T2" secondAttribute="bottom" constant="30" id="uRB-Qz-yzh"/>
                             <constraint firstItem="0Rr-mc-s3O" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wcV-aY-IpU"/>
-                            <constraint firstItem="Lac-Ee-8T2" firstAttribute="top" secondItem="0Rr-mc-s3O" secondAttribute="bottom" constant="125" id="wpW-Ns-LGc"/>
+                            <constraint firstItem="Lac-Ee-8T2" firstAttribute="top" secondItem="0Rr-mc-s3O" secondAttribute="bottom" constant="75" id="wpW-Ns-LGc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,7 +158,126 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ze-ug-L3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="369"/>
+            <point key="canvasLocation" x="1071" y="99"/>
+        </scene>
+        <!--Add Question View Controller-->
+        <scene sceneID="Ckp-7l-vI1">
+            <objects>
+                <viewController id="tlA-9u-V1g" customClass="AddQuestionViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5eA-qn-k3C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-0a-Yqz">
+                                <rect key="frame" x="82.5" y="529" width="210" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="V5K-rL-2xT"/>
+                                    <constraint firstAttribute="height" constant="50" id="lR8-Vo-1ba"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Добавить">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addQuestionButton:" destination="tlA-9u-V1g" eventType="touchUpInside" id="eKl-Iu-AwK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите свой вопрос..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jng-ja-A6g">
+                                <rect key="frame" x="16" y="52" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите правильный ответ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bK2-CS-ruU">
+                                <rect key="frame" x="16" y="116" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AS0-Ck-Wp4">
+                                <rect key="frame" x="16" y="180" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7WC-hb-myg">
+                                <rect key="frame" x="16" y="308" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите вариант ответа..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RtB-ZO-0qI">
+                                <rect key="frame" x="16" y="244" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pbC-0f-hSS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jng-ja-A6g" firstAttribute="top" secondItem="pbC-0f-hSS" secondAttribute="top" constant="52" id="02V-8z-4sn"/>
+                            <constraint firstItem="jng-ja-A6g" firstAttribute="leading" secondItem="pbC-0f-hSS" secondAttribute="leading" constant="16" id="1EY-5l-VUi"/>
+                            <constraint firstItem="bK2-CS-ruU" firstAttribute="leading" secondItem="pbC-0f-hSS" secondAttribute="leading" constant="16" id="1Wj-8X-yV3"/>
+                            <constraint firstItem="qqC-0a-Yqz" firstAttribute="centerX" secondItem="pbC-0f-hSS" secondAttribute="centerX" id="2Bj-TD-V8l"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="trailing" secondItem="7WC-hb-myg" secondAttribute="trailing" constant="16" id="5Ku-xr-Vz6"/>
+                            <constraint firstItem="7WC-hb-myg" firstAttribute="leading" secondItem="pbC-0f-hSS" secondAttribute="leading" constant="16" id="7j6-C5-YKl"/>
+                            <constraint firstItem="AS0-Ck-Wp4" firstAttribute="leading" secondItem="pbC-0f-hSS" secondAttribute="leading" constant="16" id="EXX-4T-iaH"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="bottom" secondItem="qqC-0a-Yqz" secondAttribute="bottom" constant="68" id="Kul-FH-1Oh"/>
+                            <constraint firstItem="RtB-ZO-0qI" firstAttribute="leading" secondItem="pbC-0f-hSS" secondAttribute="leading" constant="16" id="REi-Zb-9AK"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="trailing" secondItem="bK2-CS-ruU" secondAttribute="trailing" constant="16" id="SfN-ac-4Uo"/>
+                            <constraint firstItem="7WC-hb-myg" firstAttribute="top" secondItem="RtB-ZO-0qI" secondAttribute="bottom" constant="30" id="iWK-2f-8pu"/>
+                            <constraint firstItem="AS0-Ck-Wp4" firstAttribute="top" secondItem="bK2-CS-ruU" secondAttribute="bottom" constant="30" id="lSc-cV-siy"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="trailing" secondItem="AS0-Ck-Wp4" secondAttribute="trailing" constant="16" id="mqC-Dj-kXi"/>
+                            <constraint firstItem="RtB-ZO-0qI" firstAttribute="top" secondItem="AS0-Ck-Wp4" secondAttribute="bottom" constant="30" id="plE-g2-Ddl"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="trailing" secondItem="jng-ja-A6g" secondAttribute="trailing" constant="16" id="tvB-as-HrJ"/>
+                            <constraint firstItem="pbC-0f-hSS" firstAttribute="trailing" secondItem="RtB-ZO-0qI" secondAttribute="trailing" constant="16" id="ud9-z1-8wf"/>
+                            <constraint firstItem="bK2-CS-ruU" firstAttribute="top" secondItem="jng-ja-A6g" secondAttribute="bottom" constant="30" id="xvp-yq-Ilf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addAnswerVar1" destination="AS0-Ck-Wp4" id="GcZ-7H-o38"/>
+                        <outlet property="addAnswerVar2" destination="RtB-ZO-0qI" id="8uZ-FF-vPe"/>
+                        <outlet property="addAnswerVar3" destination="7WC-hb-myg" id="L9C-qz-Wm1"/>
+                        <outlet property="addQuestion" destination="jng-ja-A6g" id="sHe-sQ-ySm"/>
+                        <outlet property="addRightAnswer" destination="bK2-CS-ruU" id="C0E-mc-JSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCu-fJ-Qww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="869"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="DQP-jY-BFE">
+            <objects>
+                <viewController id="1FH-bn-t43" customClass="SettingViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gtp-cc-Y68">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMf-iQ-ers">
+                                <rect key="frame" x="16" y="79" width="343" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="lob-CY-iDX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Случайный порядок"/>
+                                <connections>
+                                    <action selector="randomButton:" destination="1FH-bn-t43" eventType="touchUpInside" id="oUg-0p-eBh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VtX-JS-w3q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kMf-iQ-ers" firstAttribute="leading" secondItem="VtX-JS-w3q" secondAttribute="leading" constant="16" id="Jdn-sY-uEU"/>
+                            <constraint firstItem="VtX-JS-w3q" firstAttribute="trailing" secondItem="kMf-iQ-ers" secondAttribute="trailing" constant="16" id="Lgw-Sg-gAt"/>
+                            <constraint firstItem="kMf-iQ-ers" firstAttribute="top" secondItem="VtX-JS-w3q" secondAttribute="top" constant="79" id="bbl-ox-C0S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="random" destination="kMf-iQ-ers" id="yjp-fo-ay9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqc-nH-Dx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63" y="870"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="KUX-3s-RaX">
@@ -202,17 +353,25 @@
                                     <action selector="var1Button:" destination="lr7-VG-1Df" eventType="touchUpInside" id="Vri-Ji-dRl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLQ-He-fsL">
+                                <rect key="frame" x="158" y="166" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wEB-q6-erZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2ey-vG-rIl" firstAttribute="top" secondItem="tZV-vM-Omz" secondAttribute="bottom" constant="8" symbolic="YES" id="6hi-3X-x2R"/>
                             <constraint firstItem="hut-VI-yFW" firstAttribute="top" secondItem="wEB-q6-erZ" secondAttribute="top" constant="60" id="Ear-bi-2gY"/>
+                            <constraint firstItem="cLQ-He-fsL" firstAttribute="centerX" secondItem="wEB-q6-erZ" secondAttribute="centerX" id="KaX-re-R6q"/>
                             <constraint firstItem="wEB-q6-erZ" firstAttribute="trailing" secondItem="I6i-Zw-mGk" secondAttribute="trailing" constant="16" id="WBh-m1-rG7"/>
                             <constraint firstItem="tZV-vM-Omz" firstAttribute="leading" secondItem="wEB-q6-erZ" secondAttribute="leading" constant="16" id="Z3q-Zv-mra"/>
                             <constraint firstItem="wEB-q6-erZ" firstAttribute="trailing" secondItem="qfC-Dh-2As" secondAttribute="trailing" constant="16" id="ZiI-bd-OlZ"/>
                             <constraint firstItem="hut-VI-yFW" firstAttribute="leading" secondItem="wEB-q6-erZ" secondAttribute="leading" constant="24" id="hmX-gF-5q9"/>
                             <constraint firstItem="I6i-Zw-mGk" firstAttribute="top" secondItem="2ey-vG-rIl" secondAttribute="bottom" constant="8" symbolic="YES" id="jML-1M-vhO"/>
+                            <constraint firstItem="cLQ-He-fsL" firstAttribute="top" secondItem="hut-VI-yFW" secondAttribute="bottom" constant="46" id="kUq-be-sop"/>
                             <constraint firstItem="wEB-q6-erZ" firstAttribute="bottom" secondItem="I6i-Zw-mGk" secondAttribute="bottom" constant="20" id="kwO-fn-f7v"/>
                             <constraint firstItem="qfC-Dh-2As" firstAttribute="leading" secondItem="wEB-q6-erZ" secondAttribute="leading" constant="16" id="mJO-ju-Zzv"/>
                             <constraint firstItem="tZV-vM-Omz" firstAttribute="top" secondItem="qfC-Dh-2As" secondAttribute="bottom" constant="8" symbolic="YES" id="mll-hf-1lU"/>
@@ -224,6 +383,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countOfQuestions" destination="cLQ-He-fsL" id="uRS-aJ-XnL"/>
                         <outlet property="questionLabel" destination="hut-VI-yFW" id="kiB-UA-tHf"/>
                         <outlet property="var1" destination="qfC-Dh-2As" id="kPf-zs-xZI"/>
                         <outlet property="var2" destination="tZV-vM-Omz" id="SFn-iL-PMZ"/>
@@ -233,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzG-h7-317" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="-354.87256371814095"/>
+            <point key="canvasLocation" x="1070" y="-642"/>
         </scene>
     </scenes>
     <resources>
