@@ -12,6 +12,20 @@ protocol GameViewControllerDelegate: AnyObject {
     func getCountOfRightAnswer() -> Int
 }
 
+protocol RandomQuestionsStrategy {
+    func randomQuestionON(_ random: Bool) -> [Question]
+}
+
+final class RandomStrategy: RandomQuestionsStrategy {
+    func randomQuestionON(_ random: Bool) -> [Question] {
+        if random == true {
+            return []
+        } else {
+            return []
+        }
+    }
+}
+
 class GameViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -21,15 +35,18 @@ class GameViewController: UIViewController {
     @IBOutlet weak var var3: UIButton!
     @IBOutlet weak var var4: UIButton!
     
+    @IBOutlet weak var countOfQuestions: UILabel!
     
     weak var delegate: GameViewControllerDelegate?
     var gameSession = GameSession()
+    var sessionQuestions = [Question]()
     
     var countOfRightAnswers = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        sessionQuestions = gameSession.allQuestions
         // 4. После начала игры создайте GameSession и передайте его синглтону Game/
         Game.shared.gameSession = gameSession
         
@@ -37,7 +54,6 @@ class GameViewController: UIViewController {
         
         // делаем делегата, чтобы ловить окончание игры
         //gameSession.gameDelegate = self
-        
     }
     
     
@@ -58,7 +74,7 @@ class GameViewController: UIViewController {
     
     
     func checkAnswer(yourAnswer answer: String) {
-        if answer == gameSession.allQuestions[gameSession.rightAnswersCount].questionAndRightAnswer[questionLabel.text!] {
+        if answer == sessionQuestions[gameSession.rightAnswersCount].questionAndRightAnswer[questionLabel.text!] {
             print("Ваш ответ: \(answer)")
             print("Правльный ответ")
             sleep(1)
@@ -90,13 +106,23 @@ class GameViewController: UIViewController {
 
 extension GameViewController: GameSessionDelegate {
     func labelOfQuestion() {
+        countOfQuestions.text = "Вопрос №\(gameSession.rightAnswersCount + 1) (\(gameSession.rightAnswersCount * 100 / gameSession.allQuestions.count)%)"
+//        print("--------random \(gameSession.randomQuestion)")
+        //sessionQuestions = gameSession.allQuestions
+        if gameSession.randomQuestion {
+            sessionQuestions = gameSession.allQuestions.shuffled()
+            gameSession.randomQuestion = false
+            print("--------random \(gameSession.randomQuestion)")
+        }
+        //print(sessionQuestions)
         // если количество правильных ответов меньше количества вопросов, то задаем вопрос
         if gameSession.rightAnswersCount < gameSession.allQuestions.count {
-            let questionAndAnswer = gameSession.allQuestions[gameSession.rightAnswersCount]
+            let questionAndAnswer = sessionQuestions[gameSession.rightAnswersCount]
             print(Array(questionAndAnswer.questionAndRightAnswer)[0].key)
             
             // Пишем вопрос
             questionLabel.text = Array(questionAndAnswer.questionAndRightAnswer)[0].key
+            
             
             // Предлагаем варианты ответов, один из которых является правильным
             var1.setTitle(questionAndAnswer.firtsAnswer, for: .normal)

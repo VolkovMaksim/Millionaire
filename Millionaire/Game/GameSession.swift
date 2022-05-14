@@ -15,27 +15,19 @@ protocol GameSessionDelegate: AnyObject {
 class GameSession {
     // создаем ссылку на делегата
     weak var gameDelegate: GameSessionDelegate?
+    let setting = SettingViewController()
     
     //weak var gameVCDelegate: GameViewControllerDelegate?
     
     // перечень вопросов и ответов
-    let allQuestions = DataOfQuestions.init().questions
+    var allQuestions = DataOfQuestions.init().questions + Game.shared.questions
+    
     
     // количество правильных ответов за игровую сессию
     var rightAnswersCount = 0
     
     // количество вопросов
-    let countOfQuestions = DataOfQuestions.init().questions.count
+    let countOfQuestions = AddQuestionViewController.init().getQuestion().count
     
-    // оповещаем делегата о том, что игра окончена
-//    private func answerIncorrect () {
-//        self.gameDelegate?.didEndGame(withResult: rightAnswersCount)
-//    }
-    
-//    func countOfRightAnswer() -> Int {
-//        rightAnswersCount = (gameDelegate?.getCountOfRightAnswer())!
-//        return rightAnswersCount
-//    }
-    
-    
+    var randomQuestion = Game.shared.randomQuestion
 }

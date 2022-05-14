@@ -8,7 +8,7 @@
 import Foundation
 
 class DataOfQuestions {
-    let questions: [Question] = [Question(questionAndRightAnswer: ["Сколько будет 2 + 2" : "4"],
+    var questions: [Question] = [Question(questionAndRightAnswer: ["Сколько будет 2 + 2" : "4"],
                                           firtsAnswer: "3",
                                           secondAnswer: "4",
                                           thirdAnswer: "15",

@@ -20,6 +20,11 @@
 		37E1A28A281450C20087C659 /* DataOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E1A289281450C20087C659 /* DataOfQuestions.swift */; };
 		37E23052280AF23C00152D82 /* RecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E23051280AF23C00152D82 /* RecordsViewController.swift */; };
 		37E23054280AF96300152D82 /* RecordCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E23053280AF96300152D82 /* RecordCaretaker.swift */; };
+		37EBABBD281BFE070011CA92 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBABBC281BFE070011CA92 /* SettingViewController.swift */; };
+		37EBABBF281C02350011CA92 /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBABBE281C02350011CA92 /* AddQuestionViewController.swift */; };
+		37EBABC1281C28050011CA92 /* QuestionCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBABC0281C28050011CA92 /* QuestionCaretaker.swift */; };
+		37EBABC3281C3C450011CA92 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBABC2281C3C450011CA92 /* Observer.swift */; };
+		37EBABC5281C48930011CA92 /* RandomCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EBABC4281C48930011CA92 /* RandomCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		37E1A289281450C20087C659 /* DataOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataOfQuestions.swift; sourceTree = "<group>"; };
 		37E23051280AF23C00152D82 /* RecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsViewController.swift; sourceTree = "<group>"; };
 		37E23053280AF96300152D82 /* RecordCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCaretaker.swift; sourceTree = "<group>"; };
+		37EBABBC281BFE070011CA92 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		37EBABBE281C02350011CA92 /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		37EBABC0281C28050011CA92 /* QuestionCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCaretaker.swift; sourceTree = "<group>"; };
+		37EBABC2281C3C450011CA92 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		37EBABC4281C48930011CA92 /* RandomCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,7 @@
 			children = (
 				37E1A289281450C20087C659 /* DataOfQuestions.swift */,
 				3756FC892805E23300D9EBEA /* Question.swift */,
+				37EBABC0281C28050011CA92 /* QuestionCaretaker.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -108,6 +119,10 @@
 				3756FC782805D90300D9EBEA /* Assets.xcassets */,
 				3756FC7A2805D90300D9EBEA /* LaunchScreen.storyboard */,
 				3756FC7D2805D90300D9EBEA /* Info.plist */,
+				37EBABBC281BFE070011CA92 /* SettingViewController.swift */,
+				37EBABBE281C02350011CA92 /* AddQuestionViewController.swift */,
+				37EBABC2281C3C450011CA92 /* Observer.swift */,
+				37EBABC4281C48930011CA92 /* RandomCaretaker.swift */,
 			);
 			path = Millionaire;
 			sourceTree = "<group>";
@@ -184,7 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3756FC842805DD7D00D9EBEA /* GameViewController.swift in Sources */,
+				37EBABC1281C28050011CA92 /* QuestionCaretaker.swift in Sources */,
+				37EBABBD281BFE070011CA92 /* SettingViewController.swift in Sources */,
+				37EBABBF281C02350011CA92 /* AddQuestionViewController.swift in Sources */,
 				3756FC862805DF5100D9EBEA /* Game.swift in Sources */,
+				37EBABC3281C3C450011CA92 /* Observer.swift in Sources */,
+				37EBABC5281C48930011CA92 /* RandomCaretaker.swift in Sources */,
 				37E23052280AF23C00152D82 /* RecordsViewController.swift in Sources */,
 				3756FC742805D90000D9EBEA /* MainViewController.swift in Sources */,
 				3756FC702805D90000D9EBEA /* AppDelegate.swift in Sources */,
