@@ -15,11 +15,12 @@ protocol GameSessionDelegate: AnyObject {
 class GameSession {
     // создаем ссылку на делегата
     weak var gameDelegate: GameSessionDelegate?
+    let setting = SettingViewController()
     
     //weak var gameVCDelegate: GameViewControllerDelegate?
     
     // перечень вопросов и ответов
-    let allQuestions = DataOfQuestions.init().questions + Game.shared.questions
+    var allQuestions = DataOfQuestions.init().questions + Game.shared.questions
     
     
     // количество правильных ответов за игровую сессию
@@ -27,4 +28,6 @@ class GameSession {
     
     // количество вопросов
     let countOfQuestions = AddQuestionViewController.init().getQuestion().count
+    
+    var randomQuestion = Game.shared.randomQuestion
 }

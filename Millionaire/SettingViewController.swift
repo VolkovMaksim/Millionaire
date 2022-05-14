@@ -40,6 +40,11 @@ class SettingViewController: UIViewController {
     
     
     
+    func getRandom() -> Bool {
+        return randomON
+    }
+    
+    
     
     /*
     // MARK: - Navigation
